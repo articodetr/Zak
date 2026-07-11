@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Zak Mahdi Law Firm — Your Trusted Partner for Legal Solutions</title>
+<meta name="description" content="Dearborn, Michigan bankruptcy attorney. Chapter 7, Chapter 13 and wage garnishment defense. Free consultation — call 313-846-6400.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suranna&family=Prata&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --primary:#021f12;
+  --secondary:#23582d;
+  --dark:#011c11;
+  --accent:#b79e63;
+  --bg:#f8f6f2;
+  --cream:#f1efe9;
+  --white:#fff;
+  --offwhite:#f0f0f0;
+  --heading:#021f12;
+  --text:#555;
+  --text-light:#b1b1b1;
+  --border:#d1d5db;
+  --border-light:#a3a3a394;
+  --serif:Prata,Georgia,serif;
+  --fs-xsm:1.4rem;--fs-sm:1.5rem;--fs-base:1.6rem;--fs-md:1.8rem;--fs-lg:2rem;--fs-xl:2.4rem;
+  --fs-fluid-md:clamp(2.8rem,2.487rem + .625vw,3.2rem);
+  --fs-fluid-lg:clamp(4rem,3.135rem + 2.162vw,5.6rem);
+  --fs-fluid-xl:clamp(5.2rem,3.578rem + 4.054vw,8.2rem);
+  --sp-fluid-md:clamp(2.4rem,1.6rem + 2vw,4rem);
+  --sp-fluid-xl:clamp(3.6rem,.982rem + 5.455vw,7.2rem);
+  --sp-fluid-2xl:clamp(7.2rem,2.836rem + 9.091vw,13.2rem);
+  --round-sm:8px;--round-md:12px;--round-lg:20px;--round-xl:30px;--round-2xl:40px;
+  --transition:.3s ease;
+}
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:62.5%;scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif;font-size:var(--fs-base);line-height:1.7;color:var(--text);background:var(--bg)}
+h1{font-family:Suranna,Georgia,serif;font-weight:400;color:var(--heading);line-height:1.1}
+h2,h3,.serif{font-family:var(--serif);font-weight:400;color:var(--heading);line-height:1.2}
+img{max-width:100%;height:auto;vertical-align:middle}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button,input,textarea,select{font:inherit;color:inherit}
+.container{max-width:1260px;width:100%;margin-inline:auto;padding-inline:1.6rem}
+section{padding-block:var(--sp-fluid-2xl);scroll-margin-top:9rem}
+.center{text-align:center}
+/* section header pattern (design: outlined pill badge + serif title with gold em) */
+.pill{display:inline-flex;align-items:center;padding:.9rem 2.4rem;border:1px solid var(--accent);border-radius:100px;background:var(--white);font-size:var(--fs-xsm);font-weight:600;color:var(--heading);letter-spacing:.02em}
+.section-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-fluid-lg);line-height:1.2;color:var(--heading);margin-top:2rem;letter-spacing:0}
+.section-title em{font-style:normal;color:var(--accent)}
+.center .section-title{margin-inline:auto}
+.section-head{display:grid;grid-template-columns:1.15fr 1fr;gap:4rem;align-items:end;margin-bottom:var(--sp-fluid-xl)}
+.section-head__side{display:grid;gap:2.4rem;justify-items:start;padding-bottom:.8rem}
+.section-head__side p{max-width:48ch}
+/* slider arrows */
+.arrows{display:flex;gap:1.2rem}
+.arrow{display:grid;place-items:center;width:4.8rem;height:4.8rem;border-radius:50%;border:1px solid var(--border);background:var(--white);color:var(--heading);cursor:pointer;transition:var(--transition)}
+.arrow svg{width:1.8rem;height:1.8rem}
+.arrow--gold,.arrow:hover{background:var(--accent);border-color:var(--accent);color:var(--white)}
+.icon-circle{display:grid;place-items:center;width:6rem;height:6rem;border-radius:50%;background:var(--accent);color:var(--white);flex:none}
+.icon-circle svg{width:2.6rem;height:2.6rem}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* ============ BUTTONS ============ */
+.btn{position:relative;display:inline-flex;align-items:center;gap:1.4rem;padding:.7rem .7rem .7rem 2.6rem;border-radius:100px;font-size:var(--fs-sm);font-weight:600;overflow:hidden;isolation:isolate;transition:var(--transition);cursor:pointer;border:1px solid var(--accent)}
+.btn__text{position:relative;z-index:2;transition:color var(--transition)}
+.btn__icon{position:relative;z-index:2;display:grid;place-items:center;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--white);flex:none}
+.btn__icon svg{width:2rem;height:2rem;transition:transform .35s ease}
+.btn::after{content:"";position:absolute;inset:auto;left:50%;top:50%;width:120%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%) scale(0);transition:transform .5s ease-out;z-index:1}
+.btn:hover::after{transform:translate(-50%,-50%) scale(1.1)}
+.btn:hover .btn__icon svg{transform:rotate(45deg)}
+.btn--primary{background:var(--accent);color:var(--white)}
+.btn--primary::after{background:var(--white)}
+.btn--primary:hover .btn__text{color:var(--primary)}
+.btn--primary .btn__icon{background:var(--primary)}
+.btn--secondary{background:var(--white);color:var(--primary)}
+.btn--secondary::after{background:var(--accent)}
+.btn--secondary:hover .btn__text{color:var(--white)}
+.btn--dark{background:var(--primary);color:var(--white);border-color:var(--primary)}
+.btn--dark::after{background:var(--accent)}
+/* ============ NAV ============ */
+.header{position:sticky;top:0;z-index:50;background:rgba(248,246,242,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-light)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-block:1.4rem}
+.brand{display:flex;align-items:center;gap:1.2rem}
+.brand__mark{width:4.4rem;height:4.4rem;color:var(--primary);flex:none}
+.brand strong{font-family:Suranna,serif;font-size:2.1rem;font-weight:400;color:var(--heading);line-height:1;letter-spacing:.02em}
+.brand small{display:block;margin-top:.3rem;font-size:1rem;letter-spacing:.35em;text-transform:uppercase;color:var(--accent)}
+.nav__links{display:flex;align-items:center;gap:3.2rem;font-size:var(--fs-sm);font-weight:500;color:var(--heading)}
+.nav__links a{position:relative;padding-block:.4rem;transition:color var(--transition)}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width var(--transition)}
+.nav__links a:hover{color:var(--accent)}
+.nav__links a:hover::after{width:100%}
+.nav__cta{display:flex;align-items:center;gap:1.2rem}
+.nav__phone{display:flex;flex-direction:column;line-height:1.25;text-align:right;font-size:1.2rem;color:var(--text)}
+.nav__phone b{color:var(--heading);font-size:var(--fs-sm)}
+.burger{display:none;width:4.4rem;height:4.4rem;border:1px solid var(--border);border-radius:50%;background:var(--white);cursor:pointer;place-items:center}
+.burger span{display:block;width:1.8rem;height:2px;background:var(--primary);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:100%;height:2px;background:var(--primary);transition:var(--transition)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+/* ============ HERO ============ */
+.hero{position:relative;height:calc(100vh - 7.3rem);height:calc(100svh - 7.3rem);min-height:0;display:flex;align-items:center;overflow:hidden;padding:2.4rem 0 11.5rem;isolation:isolate}
+.hero__background{position:absolute;z-index:-3;inset:0;width:100%;height:100%;object-fit:contain;object-position:right bottom;background:#f8f6f2}
+.hero::before{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,rgba(248,246,242,.99) 0%,rgba(248,246,242,.97) 28%,rgba(248,246,242,.82) 43%,rgba(248,246,242,.2) 63%,rgba(248,246,242,0) 100%)}
+.hero::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(0deg,rgba(2,31,18,.13),transparent 34%);pointer-events:none}
+.hero .container{position:relative;display:block}
+.hero__content{position:relative;z-index:5;width:min(62rem,53%)}
+.hero__badge{display:inline-flex;align-items:center;gap:1rem;padding:.8rem 1.8rem;border:1px solid var(--border);border-radius:100px;background:var(--white);font-size:var(--fs-xsm);color:var(--text)}
+.hero__badge b{color:var(--accent);font-weight:600}
+.hero h1{font-size:clamp(5.2rem,8.2vh,8.2rem);margin:1.5rem 0 1.2rem;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__lead{max-width:49ch;font-size:clamp(1.5rem,1.8vh,1.8rem);line-height:1.55;margin-bottom:2rem}
+.hero__actions{display:flex;flex-wrap:wrap;gap:1.6rem;margin-bottom:0}
+.hero__chip{position:absolute;z-index:3;display:flex;align-items:center;gap:1.1rem;padding:1rem 1.7rem;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:100px;box-shadow:0 16px 36px rgba(2,31,18,.14);font-size:var(--fs-xsm);color:var(--text);white-space:nowrap}
+.hero__chip b{display:flex;align-items:center;gap:.5rem;color:var(--heading);font-family:Suranna,serif;font-size:var(--fs-lg);line-height:1}
+.hero__chip b .star{color:var(--accent);font-size:1.4rem}
+.hero__chip small{display:block;font-size:1.1rem;color:var(--text);line-height:1.3}
+.hero__chip--reviews{position:static;width:max-content;margin-top:2.4rem}
+/* hero stats band */
+.stats{position:absolute;z-index:4;right:0;bottom:0;left:0;padding:0 1.6rem 1.2rem;color:var(--primary);background:transparent}
+.stats .container{position:relative;width:min(76rem,50vw);max-width:none;margin-inline:auto;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;border:1px solid rgba(255,255,255,.78);border-radius:2.6rem;background:linear-gradient(135deg,rgba(255,255,255,.48) 0%,rgba(255,255,255,.17) 43%,rgba(183,158,99,.1) 100%);box-shadow:0 18px 45px rgba(2,31,18,.13),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.3);backdrop-filter:blur(16px) saturate(165%) contrast(105%);-webkit-backdrop-filter:blur(16px) saturate(165%) contrast(105%)}
+.stats .container::before{content:"";position:absolute;z-index:0;top:0;right:2%;left:2%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.98),transparent)}
+.stats .container::after{content:"";position:absolute;z-index:0;top:-70%;left:-5%;width:55%;height:130%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.3),transparent 68%);pointer-events:none}
+.stat{position:relative;z-index:1;padding:1.8rem 1.2rem 1.6rem;border-left:1px solid rgba(183,158,99,.3)}
+.stat:first-child{border-left:0}
+.stat__num{display:flex;align-items:center;gap:1rem;font-family:Suranna,serif;font-size:clamp(3.8rem,5.2vh,5.2rem);font-weight:500;color:var(--primary);line-height:.92;text-shadow:0 1px 0 rgba(255,255,255,1),0 2px 12px rgba(255,255,255,.95)}
+.stat__num::before{content:"✦";color:var(--accent);font-family:Inter,sans-serif;font-size:2.2rem}
+.stat__num span{color:var(--primary)}
+.stat__num span+span{margin-left:-.8rem}
+.stat__label{margin:.7rem 0 0 3.2rem;font-size:1.35rem;font-weight:700;color:#233b2f;letter-spacing:.035em;text-transform:uppercase;text-shadow:0 1px 0 #fff,0 1px 8px rgba(255,255,255,.98)}
+/* shared media frame */
+.frame{position:relative;overflow:hidden;border-radius:var(--round-lg);background:linear-gradient(160deg,#0a2e1c,#021f12);display:grid;place-items:center;color:var(--accent)}
+.frame img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .6s ease}
+.frame:hover img{transform:scale(1.025)}
+.frame img.media-art{object-position:center center}
+/* ============ ABOUT (design: centered serif statement w/ inline images) ============ */
+.about{background:var(--cream)}
+.about__title{font-family:var(--serif);font-weight:400;font-size:var(--fs-fluid-lg);line-height:1.35;color:var(--heading);max-width:98rem;margin:3.2rem auto 2.8rem}
+.about__title img{display:inline-block;width:9rem;height:5rem;object-fit:cover;border-radius:1.4rem;vertical-align:middle;margin:0 .8rem;position:relative;top:-.4rem}
+.about__title img.about-zak{object-position:62% 32%}
+.about__sub{max-width:64ch;margin-inline:auto;font-size:var(--fs-md)}
+.about__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:1.6rem;margin-top:4rem}
+/* ============ SERVICES / PRACTICE AREA ============ */
+.services{background:var(--white)}
+.services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3.2rem}
+.service__media{position:relative;aspect-ratio:4/3;border-radius:1.6rem;overflow:hidden}
+.service__media .frame{position:absolute;inset:0;border-radius:1.6rem}
+.service h3{font-size:2.6rem;margin:2.4rem 0 1.2rem}
+.service p{font-size:var(--fs-sm)}
+.services__cta{display:flex;justify-content:center;margin-top:var(--sp-fluid-xl)}
+/* ============ WHY CHOOSE (design: photo collage + 2x2 white cards) ============ */
+.why{background:var(--cream)}
+.why .container{display:grid;grid-template-columns:.92fr 1.08fr;gap:var(--sp-fluid-xl);align-items:center}
+.why__gallery{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.why__gallery .frame{aspect-ratio:4/3;border-radius:1.6rem}
+.why__gallery .frame--big{grid-column:1/-1;aspect-ratio:16/10.5}
+.why__grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.6rem}
+.why-card{background:var(--white);border-radius:1.6rem;padding:3rem 2.8rem;box-shadow:0 12px 32px rgba(2,31,18,.05)}
+.why-card h3{font-size:2.2rem;margin:2.4rem 0 1.6rem;padding-bottom:1.6rem;border-bottom:1px solid #e7e5de}
+.why-card p{font-size:var(--fs-sm)}
+/* ============ PROCESS (design: dark green, steps w/ dashed connector + video card) ============ */
+.process{background:radial-gradient(130% 90% at 50% 0%,#175231 0%,#0b3a20 42%,var(--dark) 100%)}
+.process .pill{border-color:var(--white)}
+.process .section-title{color:var(--white)}
+.process__grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--sp-fluid-xl);align-items:center;margin-top:var(--sp-fluid-xl)}
+.steps{display:grid;gap:4rem}
+.step{position:relative;display:grid;grid-template-columns:auto 1fr;gap:2.4rem;align-items:start}
+.step:not(:last-child)::before{content:"";position:absolute;left:3rem;top:6.4rem;bottom:-4rem;border-left:2px dashed rgba(255,255,255,.28)}
+.step h3{color:var(--white);font-size:2.6rem;margin-bottom:.8rem}
+.step p{color:#b9c6bd;font-size:var(--fs-sm);max-width:50ch}
+.process__media{position:relative;border-radius:2rem;overflow:hidden;aspect-ratio:16/11;background:linear-gradient(160deg,#0a2e1c,#021f12)}
+.process__media img{width:100%;height:100%;object-fit:cover;object-position:center center}
+.play{position:absolute;inset:0;margin:auto;width:9.6rem;height:9.6rem;border-radius:50%;border:0;background:rgba(255,255,255,.88);backdrop-filter:blur(4px);display:grid;place-items:center;cursor:pointer;transition:var(--transition)}
+.play:hover{transform:scale(1.06)}
+.play svg{width:3.2rem;height:3.2rem;color:var(--accent);margin-left:.5rem}
+/* ============ CASE STUDIES (design: one big white card slider) ============ */
+.cases{background:var(--cream)}
+.case-card{display:none;grid-template-columns:.95fr 1.05fr;gap:4.4rem;background:var(--white);border-radius:3.2rem;padding:3.2rem;align-items:center}
+.case-card.active{display:grid;animation:fade .5s ease}
+.case-card__media{position:relative;aspect-ratio:4/3.5;border-radius:2rem;overflow:hidden}
+.case-card__media .frame{position:absolute;inset:0;border-radius:2rem}
+.case-tag{position:absolute;top:1.8rem;left:1.8rem;z-index:2;padding:.8rem 2rem;border-radius:100px;background:rgba(120,120,120,.45);backdrop-filter:blur(6px);color:var(--white);font-size:1.3rem;font-weight:600}
+.case-card__body{padding-right:2.4rem}
+.case-date{font-size:var(--fs-xsm);color:var(--text)}
+.case-card h3{font-size:clamp(2.6rem,1.4rem + 1.6vw,3.4rem);line-height:1.3;margin:1.6rem 0 2rem}
+.case-card .btn{margin-top:3.2rem}
+/* ============ TESTIMONIALS (design: quote left, photo right) ============ */
+.testimonials{background:var(--white)}
+.testi__wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--sp-fluid-xl);margin-top:var(--sp-fluid-xl);align-items:center}
+.testi__left .arrows{justify-content:flex-end;margin-bottom:3.2rem}
+.testi__mark{display:block;font-family:var(--serif);font-size:14rem;line-height:.55;color:#e0e0da;margin-bottom:3.6rem}
+.testi__item{display:none}
+.testi__item.active{display:block;animation:fade .5s ease}
+.testi__item blockquote{font-size:clamp(2rem,1.5rem + 1vw,2.6rem);font-style:italic;color:var(--text);line-height:1.6;margin-bottom:3.6rem}
+.testi__item footer{display:flex;align-items:center;gap:1.4rem}
+.avatar{display:grid;place-items:center;width:4.8rem;height:4.8rem;border-radius:50%;background:var(--primary);color:var(--accent);font-family:var(--serif);font-size:var(--fs-md);flex:none}
+.testi__item cite{font-style:normal;font-weight:600;color:var(--heading);font-size:var(--fs-sm)}
+.testi__item cite small{display:block;font-weight:400;color:var(--text);font-size:var(--fs-xsm)}
+.testi__photo{aspect-ratio:1/1.05;border-radius:2rem;overflow:hidden}
+/* ============ FAQ (design: numbered white accordion cards) ============ */
+.faq{background:var(--cream)}
+.faq .container{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--sp-fluid-xl);align-items:start}
+.faq__img{margin-top:3.6rem;aspect-ratio:4/3.4;border-radius:2rem;overflow:hidden}
+.faq__list{display:grid;gap:1.8rem}
+.faq details{background:var(--white);border-radius:1.6rem;padding:0 2.8rem;transition:var(--transition)}
+.faq summary{display:flex;align-items:baseline;gap:2rem;padding:2.4rem 0;cursor:pointer;list-style:none;font-family:var(--serif);font-size:2.1rem;color:var(--heading);line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{font-style:normal;font-family:var(--serif);color:#9aa39d;font-size:1.7rem;flex:none}
+.faq summary::after{content:"+";margin-left:auto;font-family:Inter,sans-serif;font-size:2.6rem;font-weight:400;color:var(--heading);line-height:1;flex:none}
+.faq details[open] summary::after{content:"×"}
+.faq details p{padding:0 3.6rem 2.6rem 3.9rem;color:var(--text);font-size:var(--fs-sm)}
+/* ============ CONTACT (design: cream form card + photo) ============ */
+.contact{background:var(--white)}
+.contact__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3.2rem;margin-top:var(--sp-fluid-xl);align-items:stretch}
+.form{background:var(--cream);border-radius:3.2rem;padding:clamp(2.8rem,4vw,4.8rem);display:flex;flex-direction:column;gap:1.8rem}
+.form__title{font-family:var(--serif);font-weight:400;font-size:3.2rem;color:var(--heading);margin-bottom:1.2rem}
+.form__title em{font-style:normal;color:var(--accent)}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem}
+.form input,.form select{width:100%;padding:1.8rem 2.6rem;border:0;border-radius:100px;background:var(--white);font-size:var(--fs-sm);color:var(--heading);outline:none;transition:var(--transition)}
+.form textarea{width:100%;min-height:16rem;padding:2rem 2.6rem;border:0;border-radius:2rem;background:var(--white);font-size:var(--fs-sm);color:var(--heading);outline:none;resize:vertical;transition:var(--transition)}
+.form ::placeholder{color:#9a9a94}
+.form select{appearance:none;-webkit-appearance:none;color:#9a9a94;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");background-repeat:no-repeat;background-size:1.6rem;background-position:right 2.4rem center}
+.form :is(input,select,textarea):focus{box-shadow:0 0 0 2px var(--accent)}
+.form .btn{align-self:flex-start;margin-top:.8rem}
+.contact__photo{border-radius:2.4rem;overflow:hidden;min-height:44rem;background:linear-gradient(160deg,#0a2e1c,#021f12)}
+.contact__photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+/* ============ FOOTER (design: floating dark-green rounded card + giant gradient name) ============ */
+.footer{padding:var(--sp-fluid-md) 1.6rem var(--sp-fluid-md)}
+.footer__card{max-width:152rem;margin-inline:auto;background:radial-gradient(120% 110% at 50% 0%,#14452a 0%,#0b3a20 45%,var(--dark) 100%);border-radius:4rem;padding:clamp(3.2rem,5vw,6.4rem) clamp(2rem,4vw,6.4rem);overflow:hidden}
+.footer__name{font-weight:600;font-size:clamp(5.6rem,11.5vw,14.4rem);line-height:1.05;text-align:center;letter-spacing:-.02em;white-space:nowrap;background:linear-gradient(180deg,#eef2ef 0%,rgba(238,242,239,.05) 92%);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:clamp(3.2rem,5vw,6.4rem)}
+.footer__grid{max-width:1260px;margin-inline:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:var(--sp-fluid-md)}
+.footer__tag{font-family:var(--serif);font-size:2.2rem;color:var(--white);line-height:1.55;max-width:30ch;margin-bottom:3.2rem}
+.footer h4{font-family:var(--serif);font-weight:400;color:var(--white);font-size:2.4rem;margin-bottom:2.2rem}
+.footer ul{display:grid;gap:1.4rem;font-size:var(--fs-sm);color:#c2cdc6}
+.footer ul a{transition:var(--transition)}
+.footer ul a:hover{color:var(--accent)}
+.socials{display:flex;gap:1.2rem}
+.socials a{display:grid;place-items:center;width:4.4rem;height:4.4rem;border-radius:50%;background:var(--accent);color:var(--white);transition:var(--transition)}
+.socials a:hover{background:var(--white);color:var(--accent)}
+.socials svg{width:1.9rem;height:1.9rem}
+.contact-info li{display:flex;gap:1.4rem;align-items:flex-start}
+.contact-info svg{width:2rem;height:2rem;color:var(--white);flex:none;margin-top:.4rem}
+.footer__copy{max-width:1260px;margin:2.8rem auto 0;text-align:center;font-size:var(--fs-xsm);color:var(--text)}
+.footer__copy a:hover{color:var(--accent)}
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  .nav__links{display:none}
+  .burger{display:grid}
+  .nav__links.open{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:flex-start;gap:0;background:var(--white);border-bottom:1px solid var(--border);padding:1.6rem 2.4rem;box-shadow:0 24px 40px rgba(2,31,18,.12)}
+  .nav__links.open a{width:100%;padding:1.4rem 0;border-bottom:1px solid var(--offwhite)}
+  .hero{height:calc(100vh - 7.3rem);height:calc(100svh - 7.3rem);min-height:0;align-items:flex-start;padding:3rem 0 16.5rem}
+  .hero__content{width:min(62rem,100%)}
+  .hero__background{object-position:right bottom}
+  .hero::before{background:linear-gradient(180deg,rgba(248,246,242,.99) 0%,rgba(248,246,242,.94) 44%,rgba(248,246,242,.28) 67%,rgba(248,246,242,0) 100%)}
+  .hero__chip--reviews{position:static;margin-top:2.4rem}
+  .stats .container{width:calc(100% - 1.6rem);margin-inline:auto;grid-template-columns:1fr 1fr}
+  .stat{padding:1.2rem 1.8rem;border:0;border-top:1px solid rgba(183,158,99,.3)}
+  .stat__num{font-size:clamp(3rem,4.5vh,3.8rem)}
+  .stat__label{margin-top:.4rem;font-size:1.15rem}
+  .nav__phone{display:none}
+  .about__title img{width:7rem;height:4rem}
+  .section-head{grid-template-columns:1fr;align-items:start;gap:2.4rem}
+  .services__grid{grid-template-columns:1fr 1fr}
+  .why .container,.faq .container,.process__grid,.testi__wrap,.contact__grid{grid-template-columns:1fr}
+  .case-card{grid-template-columns:1fr}
+  .case-card__body{padding-right:0}
+  .footer__grid{grid-template-columns:1fr 1fr}
+  .footer__name{white-space:normal}
+}
+@media(max-width:640px){
+  section{scroll-margin-top:15rem}
+  .services__grid,.why__grid,.form__row{grid-template-columns:1fr}
+  .why__gallery{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:clamp(3.8rem,11vw,5rem);margin:1.2rem 0 1rem}
+  .hero__lead{font-size:1.4rem;line-height:1.45;margin-bottom:1.5rem}
+  .hero{height:calc(100vh - 7.3rem);height:calc(100svh - 7.3rem);min-height:0;padding:2.2rem 0 14.5rem}
+  .hero__background{top:auto;height:48%;object-fit:cover;object-position:70% center}
+  .hero__chip{font-size:1.1rem;padding:.8rem 1.2rem}
+  .hero__chip--reviews{position:static;margin-top:2rem}
+  .stats .container{grid-template-columns:1fr 1fr}
+  .stats{padding:0 .8rem .8rem}
+  .stats .container{border-radius:1.8rem;backdrop-filter:blur(12px) saturate(150%);-webkit-backdrop-filter:blur(12px) saturate(150%)}
+  .stat{padding:1rem 1.2rem}
+  .stat__num{font-size:clamp(2.6rem,7.5vw,3.3rem)}
+  .stat__num::before{font-size:1.4rem}
+  .stat__label{margin-left:2.2rem;font-size:1rem;line-height:1.25}
+  .about__title{line-height:1.45}
+  .about__title img{width:5.6rem;height:3.4rem;border-radius:1rem}
+  .case-card{padding:2rem}
+  .faq details p{padding-left:0}
+  .footer__grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="The Zak Mahdi Law Firm — home">
+        <svg class="brand__mark" viewBox="0 0 214 214" aria-hidden="true"><path d="M213 2s0 .5-.26 1.074c-.42 2.047-.718 3.52-.718 4.994-.023 65.899-.028 131.797.022 197.695.001 1.746.623 3.491.956 5.237 0 0 0 .5-.469.745-70.823.248-141.177.252-211.531.255 0 0 0-.5.26-1.074.42-2.047.718-3.52.718-4.994.023-65.899.028-131.797-.022-197.695C1.956 6.49 1.333 4.746 1 3c0 0 0-.5.469-.745C72.292 2.007 142.646 2.003 213 2m-91.812 62.91H91.585c-.2 3.49-.2 3.49 3.055 4.305 7.582 1.898 10.232 5.169 10.347 13.04.085 5.832.048 11.666.016 17.499-.062 11.496.18 23.008-.35 34.484-.397 8.615-2.802 10.658-11.123 11.901-.786.118-1.555.354-2.4.552v4.132h34.498c1.133-3.326-.172-4.368-3.278-5.08-8.35-1.913-10.203-3.518-10.628-12.044-.686-13.797-.492-27.639-.631-41.462-.056-5.514-.01-11.028-.01-16.542 1.632 1.686 2.364 3.476 3.04 5.286 8.022 21.48 16.003 42.976 24.116 64.422.622 1.645 2.155 2.946 3.264 4.407 1.125-1.464 2.648-2.767 3.315-4.416 8.783-21.717 17.441-43.484 26.152-65.23.423-1.057 1.04-2.036 1.567-3.051.694 19.445.697 38.603.693 57.761-.001 9.294-.846 10.256-9.897 11.329-3.547.42-3.547.42-2.73 4.601h37.339c.887-2.937.353-4.332-2.943-4.796-7.515-1.059-8.462-2.406-8.467-10.138-.013-18.165-.006-36.33-.005-54.495 0-10.631.002-10.628 10.802-12.54.27-.048.484-.412.882-.77l-.43-3.887c-8.67 0-16.987-.081-25.298.1-1.083.023-2.731 1.165-3.115 2.171-6.45 16.908-12.732 33.88-19.073 50.83-1.32 3.529-2.734 7.023-4.52 11.6-8.325-21.863-16.214-42.58-24.585-63.969m-71.473 57.33 39.38-57.73H22.597l-2.58 24.155c3.065.67 4.6.104 6.053-2.763 3.39-6.685 7.151-14.392 15.052-15.57 9.372-1.4 19.112-.33 29.295-.33-9.205 13.45-18.288 26.707-27.354 39.975-9.103 13.323-18.19 26.657-28 41.035h71.323l2.78-26.61-1.218-1.183c-1.504 1.155-3.383 2.042-4.443 3.516-3.383 4.706-6.19 9.846-9.789 14.367-1.495 1.878-4.354 3.523-6.717 3.71-10.857.857-21.757 1.162-32.34 1.651-.387-1.042-.539-1.257-.486-1.335a3993.186 3993.186 0 0 1 15.543-22.888z" fill="currentColor"/></svg>
+        <span><strong>THE ZAK MAHDI</strong><small>Law Firm</small></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Practice Areas</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <p class="nav__phone">Available 24/7<b>313-846-6400</b></p>
+        <a class="btn btn--primary" href="#contact">
+          <span class="btn__text">Free consultation</span>
+          <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <img class="hero__background" src="assets/zak-mahdi-legal-hero.webp" alt="Zak Mahdi in a refined legal office" fetchpriority="high" decoding="async">
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__badge reveal"><b>◆</b> Licensed by the State Bar of Michigan</span>
+        <h1 class="reveal">Your trusted partner for <em>legal</em> solutions</h1>
+        <p class="hero__lead reveal">Clear, honest guidance for bankruptcy, debt relief, wage garnishment, and business matters across Michigan.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#contact">
+            <span class="btn__text">Start your case</span>
+            <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+          <a class="btn btn--secondary" href="tel:+13138466400">
+            <span class="btn__text">Call 313-846-6400</span>
+            <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  <!-- ================= STATS ================= -->
+  <div class="stats" aria-label="Firm highlights">
+    <div class="container">
+      <div class="stat reveal"><div class="stat__num"><span data-count="18">0</span><span>+</span></div><p class="stat__label">Years of experience</p></div>
+      <div class="stat reveal"><div class="stat__num"><span data-count="157">0</span><span>+</span></div><p class="stat__label">Google reviews</p></div>
+      <div class="stat reveal"><div class="stat__num"><span data-count="1000">0</span><span>s</span></div><p class="stat__label">Clients guided</p></div>
+      <div class="stat reveal"><div class="stat__num">$<span>M+</span></div><p class="stat__label">Debt eliminated</p></div>
+    </div>
+  </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="container center">
+      <span class="pill reveal">About Zak</span>
+      <h2 class="about__title reveal">Zak Mahdi <img class="about-zak" src="assets/zak-about.webp" alt="Portrait of Zak Mahdi in a warm, minimal office" loading="lazy" decoding="async"> is a dedicated bankruptcy attorney focused on protecting his clients rights <img src="assets/client-consultation.webp" alt="Private legal consultation in a professional office" loading="lazy" decoding="async"> with clear results-driven <img src="assets/legal-courtroom.webp" alt="A quiet, modern courtroom" loading="lazy" decoding="async"> guidance</h2>
+      <p class="about__sub reveal">Every case is handled with care, attention, and a strong sense of responsibility. Zak believes informed clients make better decisions, which is why clarity and honesty guide his work — from Chapter 7 and Chapter 13 bankruptcy to stopping wage garnishments.</p>
+      <div class="about__actions reveal">
+        <a class="btn btn--primary" href="#contact"><span class="btn__text">Start Your Case</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <a class="btn btn--secondary" href="#contact"><span class="btn__text">Get A Free Quote</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES / PRACTICE AREA ================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="pill reveal">Practice Area</span>
+          <h2 class="section-title reveal">Legal <em>Services</em><br>You Can Trust</h2>
+        </div>
+        <div class="section-head__side reveal">
+          <p>Zak works closely with clients, providing clear, practical legal solutions with trust and transparency.</p>
+          <div class="arrows">
+            <button class="arrow" id="svcPrev" aria-label="Previous services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+            <button class="arrow arrow--gold" id="svcNext" aria-label="Next services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="services__grid" id="svcGrid">
+        <article class="service reveal">
+          <div class="service__media"><div class="frame"><img class="media-art" src="assets/case-chapter-7.webp" alt="Illustrative financial fresh-start planning scene" loading="lazy" decoding="async"></div></div>
+          <h3>Chapter 7 Bankruptcy</h3>
+          <p>Wipe out credit cards, medical bills, and personal loans in a matter of months — and in most cases you keep your home and car.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service__media"><div class="frame"><img class="media-art" src="assets/case-chapter-13.webp" alt="Illustrative Michigan home protected through a repayment plan" loading="lazy" decoding="async"></div></div>
+          <h3>Chapter 13 Bankruptcy</h3>
+          <p>Reorganize your debt into one affordable payment plan, stop foreclosure, and protect what matters most.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service__media"><div class="frame"><img class="media-art" src="assets/case-garnishment.webp" alt="Illustrative household budget and wage review" loading="lazy" decoding="async"></div></div>
+          <h3>Wage Garnishment Defense</h3>
+          <p>Creditors taking money straight from your paycheck? We move fast to stop garnishments — often within days.</p>
+        </article>
+      </div>
+      <div class="services__cta reveal">
+        <a class="btn btn--primary" href="#contact"><span class="btn__text">Start Your Case</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE ================= -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why__gallery reveal">
+        <div class="frame frame--big"><img src="assets/zak-library.webp" alt="Attorney Zak Mahdi in a refined law library" loading="lazy" decoding="async"></div>
+        <div class="frame"><img class="media-art" src="assets/client-consultation.webp" alt="Confidential consultation in a professional law office" loading="lazy" decoding="async"></div>
+        <div class="frame"><img class="media-art" src="assets/legal-courtroom.webp" alt="Interior of a quiet modern courtroom" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="why__body">
+        <span class="pill reveal">Why Choose Us</span>
+        <h2 class="section-title reveal">Why <em>Choose</em> Zak</h2>
+        <div class="why__grid">
+          <div class="why-card reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></span>
+            <h3>Client Focused Approach</h3>
+            <p>Every case is handled with personal attention, clear communication, and respect for your concerns.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
+            <h3>Clear &amp; Honest Guidance</h3>
+            <p>You receive straightforward legal advice without confusion, hidden details, or unnecessary complexity.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l7-4 7 4M3 13l2-6 2 6a3.5 3.5 0 0 1-4 0zM17 13l2-6 2 6a3.5 3.5 0 0 1-4 0z"/></svg></span>
+            <h3>Responsive Communication</h3>
+            <p>Questions are answered promptly, and you're kept informed at every stage of your case — 24/7.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Trusted Professional</h3>
+            <p>Your rights and interests are protected with care, diligence, and professional integrity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="center">
+        <span class="pill reveal">4 Step Process</span>
+        <h2 class="section-title reveal">Simple &amp; Transparent<br><em>Process</em></h2>
+      </div>
+      <div class="process__grid">
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></span>
+            <div><h3>1. Initial Consultation</h3><p>A free, no-pressure conversation about your situation, concerns, and legal goals in a confidential setting.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6"/><circle cx="11.5" cy="14.5" r="2.5"/><path d="M13.3 16.3 15 18"/></svg></span>
+            <div><h3>2. Case Review</h3><p>Your debts, income, and assets are carefully reviewed to identify risks, options, and the best strategy.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l7-4 7 4M3 13l2-6 2 6a3.5 3.5 0 0 1-4 0zM17 13l2-6 2 6a3.5 3.5 0 0 1-4 0z"/></svg></span>
+            <div><h3>3. Legal Action</h3><p>A clear practical plan is filed based on your specific circumstances — creditors are ordered to stop calling and garnishing.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8a4 4 0 0 0-4 4c0 1.5.8 2.8 2 3.4V17a2 2 0 0 0 4 0v-1.6c1.2-.6 2-1.9 2-3.4a4 4 0 0 0-4-4z"/><path d="M12 2v2M4.9 4.9l1.4 1.4M2 12h2M20 12h2M17.7 6.3l1.4-1.4"/></svg></span>
+            <div><h3>4. Resolution</h3><p>Focused efforts to achieve the best possible outcome — your qualifying debt is discharged for a real fresh start.</p></div>
+          </li>
+        </ol>
+        <div class="process__media reveal">
+          <img src="assets/case-preparation.webp" alt="Organized legal case preparation at an attorney's desk" loading="lazy" decoding="async">
+          <button class="play" aria-label="Play introduction video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CASE STUDIES ================= -->
+  <section class="cases" id="cases">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="pill reveal">Case Studies</span>
+          <h2 class="section-title reveal">Proven Results<br>From Real <em>Cases</em></h2>
+        </div>
+        <div class="section-head__side reveal">
+          <p>Each case shows Zak's thoughtful approach, focusing on clarity, strategy, and reliable results.</p>
+          <div class="arrows">
+            <button class="arrow" id="casePrev" aria-label="Previous case"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+            <button class="arrow arrow--gold" id="caseNext" aria-label="Next case"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <article class="case-card active">
+        <div class="case-card__media">
+          <span class="case-tag">Chapter 7</span>
+          <div class="frame"><img class="media-art" src="assets/case-chapter-7.webp" alt="Illustrative Chapter 7 financial fresh-start planning scene" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="case-card__body">
+          <span class="case-date">Dearborn, MI</span>
+          <h3>$78,000 In Credit Card And Medical Debt Discharged In 4 Months</h3>
+          <p>A Dearborn family was drowning in years of unmanageable debt from medical expenses and credit cards. They kept their home and both vehicles while walking away with a true fresh start.</p>
+          <a class="btn btn--primary" href="#contact"><span class="btn__text">Read The Full Case</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+      </article>
+      <article class="case-card">
+        <div class="case-card__media">
+          <span class="case-tag">Garnishment</span>
+          <div class="frame"><img class="media-art" src="assets/case-garnishment.webp" alt="Illustrative wage-garnishment and household budget review" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="case-card__body">
+          <span class="case-date">Taylor, MI</span>
+          <h3>Paycheck Garnishment Stopped Within One Week Of Filing</h3>
+          <p>A Taylor autoworker was losing 25% of every check to a creditor judgment. The garnishment stopped just days after Zak filed the case — and part of the seized wages was recovered.</p>
+          <a class="btn btn--primary" href="#contact"><span class="btn__text">Read The Full Case</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+      </article>
+      <article class="case-card">
+        <div class="case-card__media">
+          <span class="case-tag">Chapter 13</span>
+          <div class="frame"><img class="media-art" src="assets/case-chapter-13.webp" alt="Illustrative Michigan home protected through Chapter 13" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="case-card__body">
+          <span class="case-date">Westland, MI</span>
+          <h3>Foreclosure Halted And Mortgage Arrears Rolled Into One Plan</h3>
+          <p>A Westland homeowner four months behind on the mortgage was facing foreclosure. The house was saved with an affordable 5-year Chapter 13 repayment plan.</p>
+          <a class="btn btn--primary" href="#contact"><span class="btn__text">Read The Full Case</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="center">
+        <span class="pill reveal">Testimonial</span>
+        <h2 class="section-title reveal">See What Our<br><em>Clients</em> Are Saying</h2>
+      </div>
+      <div class="testi__wrap">
+        <div class="testi__left reveal">
+          <div class="arrows">
+            <button class="arrow" id="testiPrev" aria-label="Previous testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+            <button class="arrow arrow--gold" id="testiNext" aria-label="Next testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+          </div>
+          <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+          <div class="testi__item active">
+            <blockquote>Zak was clear, professional, and supportive throughout my case. He explained everything simply and handled the matter with confidence. I highly recommend his services.</blockquote>
+            <footer><span class="avatar">P</span><cite>Paula W.<small>Google Review</small></cite></footer>
+          </div>
+          <div class="testi__item">
+            <blockquote>From the first call I felt like a weight was lifted. Zak answered every question and was available whenever I needed him.</blockquote>
+            <footer><span class="avatar">E</span><cite>Erica A.<small>Google Review</small></cite></footer>
+          </div>
+          <div class="testi__item">
+            <blockquote>Professional, respectful, and fast. My garnishment stopped and my case was handled exactly like he said it would be.</blockquote>
+            <footer><span class="avatar">A</span><cite>Antonio W.<small>Google Review</small></cite></footer>
+          </div>
+        </div>
+        <div class="testi__photo frame reveal">
+          <img class="media-art" src="assets/client-trust.webp" alt="A reassuring handshake after a confidential legal consultation" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq__intro">
+        <span class="pill reveal">FAQ'S</span>
+        <h2 class="section-title reveal">Got <em>Questions?</em><br>Zak Has Answers</h2>
+        <div class="faq__img frame reveal"><img src="assets/zak-case-review.webp" alt="Zak Mahdi in a case review office" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="faq__list">
+        <details class="reveal" open>
+          <summary><i>01.</i> What Types Of Cases Does Zak Handle?</summary>
+          <p>The firm focuses on consumer debt relief: Chapter 7 bankruptcy, Chapter 13 bankruptcy, and wage garnishment defense — providing tailored legal solutions for each client across Metro Detroit and Michigan.</p>
+        </details>
+        <details class="reveal">
+          <summary><i>02</i> How Do I Schedule A Consultation?</summary>
+          <p>Call 313-846-6400 any time — the firm is available 24/7 — or send a message through the contact form below. Your first consultation is always free.</p>
+        </details>
+        <details class="reveal">
+          <summary><i>03</i> What I Should Bring To My First Meeting?</summary>
+          <p>A rough list of your debts, recent pay stubs, and any court or garnishment papers you've received. Don't worry if you're missing something — we'll help you gather it.</p>
+        </details>
+        <details class="reveal">
+          <summary><i>04</i> How Long Will My Case Take?</summary>
+          <p>Most Chapter 7 cases discharge in about 3–5 months. Chapter 13 repayment plans run 3–5 years, but protections — like stopping garnishments and foreclosure — begin the day we file.</p>
+        </details>
+        <details class="reveal">
+          <summary><i>05</i> How Are Legal Fees Structured?</summary>
+          <p>Your first consultation is always free. Fees are flat, explained up front, and flexible payment arrangements are available — no surprises.</p>
+        </details>
+        <details class="reveal">
+          <summary><i>06</i> Will I Lose My House Or My Car?</summary>
+          <p>In the vast majority of cases, no. Michigan exemptions protect most homes, vehicles, and retirement accounts. Zak reviews exactly what's protected before anything is filed.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="center">
+        <span class="pill reveal">Get In Touch</span>
+        <h2 class="section-title reveal">Get The <em>Legal Help</em><br>You Deserve</h2>
+      </div>
+      <div class="contact__grid">
+        <form class="form reveal" onsubmit="event.preventDefault();alert('Thanks! This is a prototype — the form is not wired up yet.')">
+          <h3 class="form__title">Take The <em>First Step</em></h3>
+          <div class="form__row">
+            <input type="text" name="name" placeholder="Your Name" aria-label="Your name" required>
+            <input type="email" name="email" placeholder="Your Email" aria-label="Your email" required>
+          </div>
+          <div class="form__row">
+            <input type="tel" name="phone" placeholder="Your Phone Number" aria-label="Your phone number">
+            <select name="service" aria-label="Type of service">
+              <option value="" disabled selected>Type of service</option>
+              <option>Chapter 7 Bankruptcy</option>
+              <option>Chapter 13 Bankruptcy</option>
+              <option>Wage Garnishment</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <textarea name="message" placeholder="Message" aria-label="Message"></textarea>
+          <button class="btn btn--primary" type="submit"><span class="btn__text">Contact Now</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></button>
+        </form>
+        <div class="contact__photo reveal">
+          <img src="assets/zak-contact.webp" alt="Attorney Zak Mahdi in a welcoming consultation room" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer__card">
+    <div class="footer__name">Zak Mahdi</div>
+    <div class="footer__grid">
+      <div>
+        <p class="footer__tag">Your Reliable Partner For Professional Legal Advice And Strong Advocacy.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.173A4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM6 9H2v12h4zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
+          <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="contact-info">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1 Parklane Blvd, Suite 729&nbsp;B,<br>East Dearborn, MI 48126</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+13138466400">313-846-6400 (24/7)</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Serving Dearborn, Dearborn Heights, Allen Park, Canton, Garden City, Melvindale, Taylor &amp; Westland</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="footer__copy">© 2026 The Zak Mahdi Law Firm. Prototype — informational content only. Not legal advice. · <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
+</footer>
+
+<script>
+// mobile menu
+const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+burger.addEventListener('click',()=>{const open=links.classList.toggle('open');burger.setAttribute('aria-expanded',open)});
+links.addEventListener('click',e=>{if(e.target.tagName==='A'){links.classList.remove('open');burger.setAttribute('aria-expanded',false)}});
+
+// scroll reveal
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// animated counters
+const counterIO=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(!entry.isIntersecting)return;
+    const el=entry.target,target=+el.dataset.count,dur=1400,t0=performance.now();
+    const tick=t=>{
+      const p=Math.min((t-t0)/dur,1);
+      el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString('en-US');
+      if(p<1)requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    counterIO.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
+
+// generic slider (case studies + testimonials)
+function makeSlider(items,prevId,nextId){
+  let i=[...items].findIndex(el=>el.classList.contains('active'));
+  if(i<0)i=0;
+  const show=n=>{items.forEach((el,k)=>el.classList.toggle('active',k===n))};
+  document.getElementById(prevId).addEventListener('click',()=>{i=(i-1+items.length)%items.length;show(i)});
+  document.getElementById(nextId).addEventListener('click',()=>{i=(i+1)%items.length;show(i)});
+}
+makeSlider(document.querySelectorAll('.case-card'),'casePrev','caseNext');
+makeSlider(document.querySelectorAll('.testi__item'),'testiPrev','testiNext');
+
+// services arrows scroll the grid when it overflows (mobile)
+const svcGrid=document.getElementById('svcGrid');
+document.getElementById('svcPrev').addEventListener('click',()=>svcGrid.scrollBy({left:-svcGrid.clientWidth*.8,behavior:'smooth'}));
+document.getElementById('svcNext').addEventListener('click',()=>svcGrid.scrollBy({left:svcGrid.clientWidth*.8,behavior:'smooth'}));
+</script>
+</body>
+</html>
