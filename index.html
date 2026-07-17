@@ -70,6 +70,7 @@ main{scroll-margin-top:9rem}
 /* ============ BUTTONS ============ */
 .btn{position:relative;display:inline-flex;align-items:center;gap:1.4rem;padding:.7rem .7rem .7rem 2.6rem;border-radius:100px;font-size:var(--fs-sm);font-weight:600;overflow:hidden;isolation:isolate;transition:var(--transition);cursor:pointer;border:1px solid var(--accent)}
 .btn__text{position:relative;z-index:2;transition:color var(--transition)}
+.t-short{display:none}
 .btn__icon{position:relative;z-index:2;display:grid;place-items:center;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--white);flex:none}
 .btn__icon svg{width:2rem;height:2rem;transition:transform .35s ease}
 .btn::after{content:"";position:absolute;inset:auto;left:50%;top:50%;width:120%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%) scale(0);transition:transform .5s ease-out;z-index:1}
@@ -286,7 +287,6 @@ main{scroll-margin-top:9rem}
 .cal__day small{font-size:.95rem;line-height:1;font-weight:600;color:var(--accent)}
 .cal__day:hover:not(:disabled){border-color:var(--accent)}
 .cal__day:disabled{background:transparent;border-color:transparent;color:var(--text-light);cursor:default}
-.cal__day--off:disabled{background:#fdf1f0;border-color:#f5d7d3;color:#dd6157}
 .cal__day--full:disabled{background:var(--offwhite);border-color:var(--border);color:var(--text-light)}
 .cal__day--full small{color:var(--text-light)}
 .cal__day--today{border-color:var(--accent);background:#eef3fd}
@@ -390,6 +390,10 @@ svg.watermark{width:min(34rem,42vw);height:min(34rem,42vw)}
   .hero__lead{font-size:1.4rem;line-height:1.5;margin-bottom:1.5rem}
   .hero{gap:2rem;padding:0 0 1.6rem}
   .hero__background{height:38vh}
+  .hero__actions{flex-wrap:nowrap;gap:1rem}
+  .hero__actions .btn{flex:1;justify-content:space-between;padding:.6rem .6rem .6rem 1.6rem;gap:.8rem;font-size:1.4rem;white-space:nowrap}
+  .hero__actions .btn__icon{width:3.4rem;height:3.4rem}
+  .hero__actions .btn__icon svg{width:1.7rem;height:1.7rem}
   .hero__chip{font-size:1.1rem;padding:.8rem 1.2rem}
   .hero__chip--reviews{position:static;margin-top:2rem}
   .stats .container{grid-template-columns:1fr 1fr}
@@ -420,6 +424,12 @@ svg.watermark{width:min(34rem,42vw);height:min(34rem,42vw)}
   .brand strong{font-size:1.8rem}
   .brand small{letter-spacing:.28em}
   .nav__call,.burger{width:4rem;height:4rem}
+  .hero__actions .btn{font-size:1.3rem;padding-left:1.2rem}
+  .hero__actions .btn__icon{width:3rem;height:3rem}
+}
+@media(max-width:370px){
+  .hero__actions .t-full{display:none}
+  .hero__actions .t-short{display:inline}
 }
 </style>
 </head>
@@ -471,7 +481,7 @@ svg.watermark{width:min(34rem,42vw);height:min(34rem,42vw)}
             <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           </a>
           <a class="btn btn--secondary" href="tel:+13138466400">
-            <span class="btn__text">Call 313-846-6400</span>
+            <span class="btn__text t-full">Call 313-846-6400</span><span class="btn__text t-short">Call now</span>
             <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
           </a>
         </div>
@@ -1290,10 +1300,9 @@ function renderCal(){
         prevDays=new Date(m.getFullYear(),m.getMonth(),0).getDate();
   for(let i=0;i<lead;i++)html+='<button class="cal__day" type="button" disabled>'+(prevDays-lead+1+i)+'</button>';
   for(let d=1;d<=daysIn;d++){
-    const date=new Date(m.getFullYear(),m.getMonth(),d),dow=date.getDay(),
+    const date=new Date(m.getFullYear(),m.getMonth(),d),
           left=SLOT_TIMES.length-bkTaken(date).size;
     if(date<bkToday)html+='<button class="cal__day" type="button" disabled>'+d+'</button>';
-    else if(dow===0||dow===6)html+='<button class="cal__day cal__day--off" type="button" disabled>'+d+'</button>';
     else if(!left)html+='<button class="cal__day cal__day--full" type="button" disabled>'+d+'<small>Full</small></button>';
     else{
       const cls='cal__day'+(bkKey(date)===bkKey(bkToday)?' cal__day--today':'')+
